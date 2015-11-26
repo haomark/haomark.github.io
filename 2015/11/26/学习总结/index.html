@@ -67,7 +67,7 @@ CSS的引入方式：1.&amp;lt;style&amp;gt;内部引入方式&amp;lt;/style&amp
 2.行间样式，标签内部的引入方式&amp;lt;div class=&quot;&quot; width=&quot;&quot;&amp;gt;&amp;lt;/div&amp;gt;
 3.link引入，最纯净，外部引入方式
 border的相关知识：border的默">
-<meta property="og:updated_time" content="2015-11-26T09:29:59.000Z">
+<meta property="og:updated_time" content="2015-11-26T09:52:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一阶段学习总结">
 <meta name="twitter:description" content="第一篇正式的技术博客
@@ -102,6 +102,24 @@ border的相关知识：border的默">
   </div>
 <![endif]-->
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_CN/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
@@ -141,7 +159,7 @@ border的相关知识：border的默">
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/home" rel="section">
             
               <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
             
@@ -252,8 +270,9 @@ border的相关知识：border的默">
 <h3 id="h级标签">h级标签</h3><p>h1～h6 是常用的，默认宽度继承父级，有默认的margin，字体默认加粗，行级标签</p>
 <h3 id="a标签的四中伪装态：">a标签的四中伪装态：</h3><p>a:link:没有访问过的状态<br>a:visited访问过后的样式<br>a:hover鼠标悬浮在上面的样式<br>a:active点击后未松开的样式</p>
 <h3 id="img标签：">img标签：</h3><p>是行级标签，但是可以设置宽和高。</p>
-<p>图片边框样式，单标签，有src路径属性，alt内容替代属性，title提示属性，可以设置宽和高的行级标签，自带边框<br><img src（路径）="“”" alt（描述）="“”" title（标题）="“”" width="height=" （宽高可以在css里面设置）=""></p>
-<h3 id="ol与ul标签：">ol与ul标签：</h3><p>ul是无序标签，ol是有序标签；要与li标签配合使用，中间不能添加任何其他的标签。</p>
+<p>图片边框样式，单标签，有src路径属性，alt内容替代属性，title提示属性，可以设置宽和高的行级标签，自带边框</p>
+<pre><code><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>（路径）=<span class="value">“”</span> <span class="attribute">alt</span>（描述）=<span class="value">“”</span> <span class="attribute">title</span>（标题）=<span class="value">“”</span> <span class="attribute">width</span>= <span class="attribute">height</span>= （宽高可以在<span class="attribute">CSS</span>里面设置）/&gt;</span>
+</code></pre><h3 id="ol与ul标签：">ol与ul标签：</h3><p>ul是无序标签，ol是有序标签；要与li标签配合使用，中间不能添加任何其他的标签。</p>
 <h3 id="表格标签的使用：">表格标签的使用：</h3><p>table表格级</p>
 <p>table-rows表格行级</p>
 <p>table-cell表格单元级</p>
@@ -323,7 +342,32 @@ btn4.style.background = <span class="string">'#fff'</span>;
 
     }
 </code></pre><p>点击图片换图核心代码：</p>
-</span>
+<pre><code>    <span class="keyword">var</span> btnRight =<span class="built_in">document</span>.querySelector(<span class="string">".right"</span>);
+    <span class="keyword">var</span> btnLeft =<span class="built_in">document</span>.querySelector(<span class="string">".left"</span>);
+    <span class="keyword">var</span> img =<span class="built_in">document</span>.querySelector(<span class="string">"img"</span>);
+    <span class="keyword">var</span> arr = [ <span class="string">'img/pic1.jpg'</span>,
+        <span class="string">'img/pic2.jpg'</span>,
+        <span class="string">'img/pic3.jpg'</span>,
+        <span class="string">'img/pic4.jpg'</span>,
+        <span class="string">'img/pic5.jpg'</span>,
+        <span class="string">'img/pic6.jpg'</span>,
+        <span class="string">'img/pic7.jpg'</span>]
+    <span class="keyword">var</span> i = <span class="number">0</span>;
+    btnRight.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+i++;
+<span class="keyword">if</span>(i &gt; <span class="number">6</span>){
+    i = <span class="number">0</span>;
+}
+img.src = arr[i]
+    }
+    btnLeft.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+i--;
+<span class="keyword">if</span>(i &lt; <span class="number">0</span>){
+    i = <span class="number">6</span>;
+}
+img.src = arr[i]
+    }
+</code></pre></span>
       
     </div>
 
