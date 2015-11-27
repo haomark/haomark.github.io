@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTML5," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -51,16 +51,16 @@
 
 
 
-<meta name="description" content="第一篇正式的技术博客">
+<meta name="description" content="说是JS传参，只是自己的感觉吧！今天的学习很充实。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一阶段学习总结">
-<meta property="og:url" content="http://yoursite.com/2015/11/26/学习总结/index.html">
+<meta property="og:title" content="js传参">
+<meta property="og:url" content="http://yoursite.com/2015/11/27/js传参/index.html">
 <meta property="og:site_name" content="一蓑烟雨任平生">
-<meta property="og:description" content="第一篇正式的技术博客">
-<meta property="og:updated_time" content="2015-11-26T13:38:20.000Z">
+<meta property="og:description" content="说是JS传参，只是自己的感觉吧！今天的学习很充实。">
+<meta property="og:updated_time" content="2015-11-27T13:18:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一阶段学习总结">
-<meta name="twitter:description" content="第一篇正式的技术博客">
+<meta name="twitter:title" content="js传参">
+<meta name="twitter:description" content="说是JS传参，只是自己的感觉吧！今天的学习很充实。">
 
 
 
@@ -72,7 +72,7 @@
   };
 </script>
 
-  <title> 第一阶段学习总结 | 一蓑烟雨任平生 </title>
+  <title> js传参 | 一蓑烟雨任平生 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -210,7 +210,7 @@
             
             
               
-                第一阶段学习总结
+                js传参
               
             
           </h1>
@@ -219,8 +219,8 @@
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2015-11-26T15:43:34+08:00" content="2015-11-26">
-              2015-11-26
+            <time itemprop="dateCreated" datetime="2015-11-27T21:14:44+08:00" content="2015-11-27">
+              2015-11-27
             </time>
           </span>
 
@@ -243,144 +243,41 @@
       
 
       
-        <span itemprop="articleBody"><p>第一篇正式的技术博客</p>
+        <span itemprop="articleBody"><p>说是JS传参，只是自己的感觉吧！今天的学习很充实。</p>
 <a id="more"></a>
-<p>CSS的选择器种类：通配选择器、标签选择器、类选择器、ID选择器、层级选择器、群组选择器。</p>
-<h3 id="CSS的引入方式：">CSS的引入方式：</h3><pre><code>1.<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">内部引入方式</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
-2.行间样式，标签内部的引入方式<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">""</span> <span class="attribute">width</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-3.link引入，最纯净，外部引入方式
-</code></pre><h3 id="border的相关知识：">border的相关知识：</h3><p>border的默认值宽度为3，数值不能为负数；</p>
-<p>border的样式有三种：solid实线 dashed虚线 dotted点状线</p>
-<h3 id="body的相关知识：">body的相关知识：</h3><p>可以设置宽高，可以设置边框背景，设置边框，可以修改width，height值，设置背景，会撑满屏幕.</p>
-<p>设置width值和height值可以修改body内容，不影响背景。</p>
-<h3 id="h级标签">h级标签</h3><p>h1～h6 是常用的，默认宽度继承父级，有默认的margin，字体默认加粗，行级标签</p>
-<h3 id="a标签的四中伪装态：">a标签的四中伪装态：</h3><p>a:link:没有访问过的状态<br>a:visited访问过后的样式<br>a:hover鼠标悬浮在上面的样式<br>a:active点击后未松开的样式</p>
-<h3 id="img标签：">img标签：</h3><p>是行级标签，但是可以设置宽和高。</p>
-<p>图片边框样式，单标签，有src路径属性，alt内容替代属性，title提示属性，可以设置宽和高的行级标签，自带边框</p>
-<pre><code><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>（路径）=<span class="value">“”</span> <span class="attribute">alt</span>（描述）=<span class="value">“”</span> <span class="attribute">title</span>（标题）=<span class="value">“”</span> <span class="attribute">width</span>= <span class="attribute">height</span>= （宽高可以在<span class="attribute">CSS</span>里面设置）/&gt;</span>
-</code></pre><h3 id="ol与ul标签：">ol与ul标签：</h3><p>ul是无序标签，ol是有序标签；要与li标签配合使用，中间不能添加任何其他的标签。</p>
-<h3 id="表格标签的使用：">表格标签的使用：</h3><p>table表格级</p>
-<p>table-rows表格行级</p>
-<p>table-cell表格单元级</p>
-<pre><code>    <span class="tag">&lt;<span class="title">table</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">caption</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">tbody</span>&gt;</span>
-                <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
-                    <span class="tag">&lt;<span class="title">th</span>&gt;</span><span class="tag">&lt;/<span class="title">th</span>&gt;</span><span class="comment">&lt;!-- (行头) --&gt;</span>
-                    <span class="tag">&lt;<span class="title">td</span> <span class="attribute">rowspan</span>=<span class="value">"(跨列)"</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
-                    <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"(跨行)"</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
-                <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">caption</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">table</span>&gt;</span>
-</code></pre><h3 id="文本格式化标签：">文本格式化标签：</h3><p>i,em,var,b,strong,sub,sup,del,object,code,small,big{}</p>
-<p>新的字体样式：</p>
-<p>1.em，按倍数递增。可以取小数。以父级为参考依据</p>
-<p>2.rem，按倍数增长，可以取小数，以html为依据。</p>
-<p>3.%对父级的字体进行百分比改变</p>
-<p>4.font-weight:bold（加粗）normal(正常)</p>
-<p>5.font-style:italic(斜体) normal（正常）</p>
-<p>6.sub sup 用inherit恢复正常字体。</p>
-<p>7.font-family:”黑体”，“微软雅黑”，Tohoma，sans-serifd;</p>
-<p>8.line-height:行高，单位像素，整数或者是小数，可以使文本上下居中</p>
-<p>9.font的复合写法，font:font-weight  font-size/line-height font-family(bold 20px/1.5 oblique Arial,sans-serif)</p>
-<p>10.单标签</p>
-<h3 id="表单标签：">表单标签：</h3><p>1.<input type="“reset”" value="“重置”/"></p>
-<p>2.<input type="“submit”" value="“提交”/"></p>
-<p>3.<input type="“hidden”" value="“存数据用的”/"></p>
-<p>4.<textarea value="“”" name="””">123123213123我是文本域</textarea></p>
-<p>5.<select><br>    <option>12:00</option><br>    <option>13:00</option><br></select></p>
-<p>6.<input type="“text”/"></p>
-<p>7.<input type="“password”/"></p>
-<p>8.<input type="“checkbox”" value="“aaa”/"><br>   <input type="“text”" value="“bbb”/"></p>
-<p>9.<input type="“radio”" name="“sex”" value="“男人”/"><br>   <input type="“radio”" name="“sex”" value="“女人”/"></p>
-<p>10.<input type="“file”/">文件</p>
-<p>11.<input type="“button”" value="“按钮”/"></p>
-<h3 id="清除浮动的三种方法：">清除浮动的三种方法：</h3><p>1.clear：both；</p>
-<p>2.overflow：hidden;</p>
-<p>3.增加父类的高度。</p>
-<h3 id="定位：">定位：</h3><p>1.相对定位：relative；</p>
-<p>2.绝对定位：absolute；</p>
-<p>3.固定定位：fixed。</p>
-<h3 id="初始javascript">初始javascript</h3><p>1.大小写不同代表两个不同的东西。</p>
-<p>2.不能把关键字和保留字用作标识符</p>
-<p>3.ECMAscript关键字<br>break,else,new,var,case,finally,return,void,catch,for,switch,while,continue,function,this,with,default,if,throw,delete,in,try,do,instanceof,typeof,debugger(es6新增关键字)</p>
-<p>4.获得节点：<br>var btns =document.querySelectorAll(“”);//选择一组标签选择器<br>var btn =document.querySelector(“”);//选择一个标签选择器</p>
-<p>5.JS的文件引入：</p>
-<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"js/test.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre><p>图片渐变核心代码：</p>
-<pre><code>    <span class="function"><span class="keyword">function</span> <span class="title">showPic1</span>(<span class="params"></span>)</span>{
-btn1.style.background = <span class="string">'#fff'</span>;
-<span class="built_in">document</span>.querySelector(<span class="string">"ol"</span>).style.left = <span class="string">'0px'</span>;    
-    }
-    <span class="function"><span class="keyword">function</span> <span class="title">showPic2</span> (<span class="params"></span>) </span>{
-btn2.style.background = <span class="string">'#fff'</span>;
-<span class="built_in">document</span>.querySelector(<span class="string">"ol"</span>).style.left = <span class="string">'-800px'</span>;
-
-    }
-    <span class="function"><span class="keyword">function</span> <span class="title">showPic3</span> (<span class="params"></span>) </span>{
-btn3.style.background = <span class="string">'#fff'</span>;
-<span class="built_in">document</span>.querySelector(<span class="string">"ol"</span>).style.left = <span class="string">'-1600px'</span>;
-    }
-    <span class="function"><span class="keyword">function</span> <span class="title">showPic4</span> (<span class="params"></span>) </span>{
-btn4.style.background = <span class="string">'#fff'</span>;
-<span class="built_in">document</span>.querySelector(<span class="string">"ol"</span>).style.left = <span class="string">'-2400px'</span>;
-
-    }
-</code></pre><p>点击图片换图核心代码：</p>
-<pre><code>    <span class="keyword">var</span> btnRight =<span class="built_in">document</span>.querySelector(<span class="string">".right"</span>);
-    <span class="keyword">var</span> btnLeft =<span class="built_in">document</span>.querySelector(<span class="string">".left"</span>);
-    <span class="keyword">var</span> img =<span class="built_in">document</span>.querySelector(<span class="string">"img"</span>);
-    <span class="keyword">var</span> arr = [ <span class="string">'img/pic1.jpg'</span>,
-        <span class="string">'img/pic2.jpg'</span>,
-        <span class="string">'img/pic3.jpg'</span>,
-        <span class="string">'img/pic4.jpg'</span>,
-        <span class="string">'img/pic5.jpg'</span>,
-        <span class="string">'img/pic6.jpg'</span>,
-        <span class="string">'img/pic7.jpg'</span>]
-    <span class="keyword">var</span> i = <span class="number">0</span>;
-    btnRight.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-i++;
-<span class="keyword">if</span>(i &gt; <span class="number">6</span>){
-    i = <span class="number">0</span>;
-}
-img.src = arr[i]
-    }
-    btnLeft.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-i--;
-<span class="keyword">if</span>(i &lt; <span class="number">0</span>){
-    i = <span class="number">6</span>;
-}
-img.src = arr[i]
-    }
-</code></pre></span>
+<h3 id="今天学习内容总结：">今天学习内容总结：</h3><p>1.javascript 预解析和作用域</p>
+<p>2.javascript 全局作用域和局部作用域</p>
+<p>3.函数：匿名函数，声明函数，函数表达式</p>
+<p>4.（）执行运算符的运用</p>
+<p>5.return的用法，函数参数的解析</p>
+<h3 id="课堂笔记：">课堂笔记：</h3><p>声明函数或者函数声明，是使用function关键字+函数名声明的函数。<br>function test（）｛｝</p>
+<p>函数表达式 就是使用function关键字，没有函数名，赋值给一个变量的函数。</p>
+<p>匿名函数就是使用function关键字但是没有函数名的函数。<br>var j ＝ function（）｛｝</p>
+<p>函数表达式可是尾部加（）进行立即执行<br>var j ＝ function（）｛｝（）</p>
+<p>匿名函数执行方法，加完（），在后面直接执行：第一个括号把匿名函数定义成函数表达式，第二个表示执行。<br>（function（）｛｝）（）</p>
+<p>ECMA</p>
+<p>全局变量可以在任何地方访问</p>
+<p>函数内部的变量，对外部是不可见的</p>
+<p>函数内部可以访问外部函数的变量</p>
+<p>return的默认返回值是undefind</p>
+</span>
       
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/HTML5/" rel="tag">#HTML5</a>
-          
-        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/25/心灵鸡汤/" rel="next" title="为什么你知道那么多道理，却依然过不好这一生">
-                <i class="fa fa-chevron-left"></i> 为什么你知道那么多道理，却依然过不好这一生
+              <a href="/2015/11/26/学习总结/" rel="next" title="第一阶段学习总结">
+                <i class="fa fa-chevron-left"></i> 第一阶段学习总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/27/js传参/" rel="prev" title="js传参">
-                js传参 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -627,7 +524,7 @@ img.src = arr[i]
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS的引入方式："><span class="nav-number">1.</span> <span class="nav-text">CSS的引入方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#border的相关知识："><span class="nav-number">2.</span> <span class="nav-text">border的相关知识：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#body的相关知识："><span class="nav-number">3.</span> <span class="nav-text">body的相关知识：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h级标签"><span class="nav-number">4.</span> <span class="nav-text">h级标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#a标签的四中伪装态："><span class="nav-number">5.</span> <span class="nav-text">a标签的四中伪装态：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#img标签："><span class="nav-number">6.</span> <span class="nav-text">img标签：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ol与ul标签："><span class="nav-number">7.</span> <span class="nav-text">ol与ul标签：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格标签的使用："><span class="nav-number">8.</span> <span class="nav-text">表格标签的使用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本格式化标签："><span class="nav-number">9.</span> <span class="nav-text">文本格式化标签：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表单标签："><span class="nav-number">10.</span> <span class="nav-text">表单标签：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除浮动的三种方法："><span class="nav-number">11.</span> <span class="nav-text">清除浮动的三种方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位："><span class="nav-number">12.</span> <span class="nav-text">定位：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始javascript"><span class="nav-number">13.</span> <span class="nav-text">初始javascript</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#今天学习内容总结："><span class="nav-number">1.</span> <span class="nav-text">今天学习内容总结：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#课堂笔记："><span class="nav-number">2.</span> <span class="nav-text">课堂笔记：</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
