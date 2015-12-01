@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>一蓑烟雨</title>
+    <title>初识OBJ对象 | 一蓑烟雨</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="很好吃的web前端菜鸟">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="一蓑烟雨">
+    <meta name="twitter:title" content="初识OBJ对象 | 一蓑烟雨">
     <meta name="twitter:description" content="很好吃的web前端菜鸟">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="一蓑烟雨">
+    <meta property="og:title" content="初识OBJ对象 | 一蓑烟雨">
     <meta property="og:description" content="很好吃的web前端菜鸟">
 
     
@@ -35,7 +35,7 @@
     <meta name="generator" content="hexo"/>
     
 
-    <link rel="canonical" href="http://yoursite.com"/>
+    <link rel="canonical" href="http://yoursite.com/2015/12/01/obj对象/"/>
 
     
 </head>
@@ -128,30 +128,107 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/12/01/obj对象/" title="link to post.title">初识OBJ对象</a></h2>
-      <p class="excerpt">
-    
-      初始obj，欢迎指正错误。
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-12-01T01:30:36.000Z" class="post-list__meta--date date">2015-12-01</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2015-12-01T01:30:36.000Z" class="post-list__meta--date date">2015-12-01</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
   <a class="tag-link" href="/tags/html5/">html5</a>
-</span><a class="btn-border-small" href="/2015/12/01/obj对象/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
+</span>
+    </div>
+    <h1 class="post-title">初识OBJ对象</h1>
+  </header>
+
+  <section class="post">
+    <h3 id="初始obj，欢迎指正错误。">初始obj，欢迎指正错误。</h3><a id="more"></a>
+<p>对象是属性的集合，类比数组进行记忆，区别是：对象给其中的元素再取名字,对象没有length</p>
+<pre><code><span class="keyword">var</span> obj = {
+    <span class="string">'num'</span>:<span class="number">123</span>;
+}
+
+<span class="built_in">console</span>.log(obj.num);
 
 
+读取当前对象的属性.和[<span class="string">''</span>]
 
-</div>
+<span class="keyword">var</span> link <span class="built_in">document</span>.equrySelector(<span class="string">'a'</span>);
+
+<span class="built_in">console</span>.log(link[<span class="number">0</span>].title)
+<span class="built_in">console</span>.log(link[<span class="number">0</span>][<span class="string">'title'</span>])
+
+
+<span class="function"><span class="keyword">function</span> <span class="title">change</span>(<span class="params">ele,样式名称，样式值</span>)</span>{
+<span class="keyword">var</span> ele = <span class="built_in">document</span>.querySelector(ele);
+ele.style[样式名称] = 样式值；
+}
+change(<span class="string">'#box'</span>,<span class="string">'border-top'</span>,<span class="string">'10px red solid'</span>);
+</code></pre><p>for in 遍历对象属性语句，枚举语句;查看对象所具有的全部属性;<br>for in 不要对数组进行循环，因为for in所读取的属性的顺序是不固定的。</p>
+<pre><code><span class="keyword">var</span> i;
+<span class="keyword">for</span>(i <span class="keyword">in</span> obj){
+    <span class="built_in">console</span>.log(i);
+}
+<span class="comment">// obj被所查寻对象替代</span>
+
+例子：
+<span class="keyword">var</span> obj = {
+    <span class="string">'num'</span>: <span class="number">1</span>,
+    <span class="string">'str'</span>: <span class="string">'123'</span>,
+    <span class="string">'fn'</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+        <span class="keyword">return</span> <span class="string">'早上好'</span>;
+    },
+    <span class="string">'on'</span>:<span class="literal">false</span>;
+}
+
+<span class="keyword">var</span> i;
+<span class="keyword">for</span>(i <span class="keyword">in</span> obj){
+    <span class="built_in">document</span>.write(<span class="string">'属性名：'</span>+i+<span class="string">'属性值：'</span>+obj[i]+<span class="string">'&lt;/br&gt;'</span>);
+}
+</code></pre><p>举例：</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">change</span>(<span class="params">ele,name,num</span>)</span>{
+    <span class="keyword">var</span> ele = <span class="built_in">document</span>.querySelector(ele);
+    ele.style.borderTop=num;
+    <span class="comment">//ele.style[name]=num;</span>
+}
+
+change(<span class="string">'#box'</span>,<span class="string">'border-top'</span>,<span class="string">'10px red solid'</span>);
+
+<span class="keyword">var</span> obj = {
+    <span class="string">'num'</span>: <span class="number">1</span>,
+    <span class="string">'str'</span>: <span class="string">'123'</span>,
+    <span class="string">'fn'</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+        <span class="keyword">return</span> <span class="string">'早上好'</span>;
+    },
+    <span class="string">'on'</span>: <span class="literal">false</span>
+}
+
+<span class="keyword">var</span> i;
+<span class="keyword">for</span>(i <span class="keyword">in</span> obj){
+    <span class="built_in">document</span>.write(<span class="string">'属性名：'</span>+i+<span class="string">'&amp;nbsp&amp;nbsp&amp;nbsp'</span>+<span class="string">'属性值：'</span>+obj[i]+<span class="string">'&lt;/br&gt;'</span>);
+}
+</code></pre>
+  </section>
+
+</article>
+
+
+<section class="post-comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="http://yoursite.com/2015/12/01/obj对象/" data-title="初识OBJ对象" data-url="http://yoursite.com/2015/12/01/obj对象/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"haomark"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
 
 
 
