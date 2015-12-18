@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>一蓑烟雨</title>
+    <title>Dom的一些知识 | 一蓑烟雨</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="很好吃的web前端菜鸟">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="一蓑烟雨">
+    <meta name="twitter:title" content="Dom的一些知识 | 一蓑烟雨">
     <meta name="twitter:description" content="很好吃的web前端菜鸟">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="一蓑烟雨">
+    <meta property="og:title" content="Dom的一些知识 | 一蓑烟雨">
     <meta property="og:description" content="很好吃的web前端菜鸟">
 
     
@@ -35,7 +35,7 @@
     <meta name="generator" content="hexo"/>
     
 
-    <link rel="canonical" href="http://yoursite.com"/>
+    <link rel="canonical" href="http://yoursite.com/2015/12/18/Dom的一些知识/"/>
 
     
 </head>
@@ -128,67 +128,133 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/11/26/学习总结/" title="link to post.title">第一阶段学习总结</a></h2>
-      <p class="excerpt">
-    
-      第一篇正式的技术博客
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-11-26T07:43:34.000Z" class="post-list__meta--date date">2015-11-26</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/HTML5/">HTML5</a>
-</span><a class="btn-border-small" href="/2015/11/26/学习总结/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/11/25/心灵鸡汤/" title="link to post.title">为什么你知道那么多道理，却依然过不好这一生</a></h2>
-      <p class="excerpt">
-    
-      念念不忘，必有回响
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-11-25T14:02:35.000Z" class="post-list__meta--date date">2015-11-25</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/灯塔/">灯塔</a>
-</span><a class="btn-border-small" href="/2015/11/25/心灵鸡汤/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/11/25/你好/" title="link to post.title">你好，陌生人！</a></h2>
-      <p class="excerpt">
-    
-      欢迎光临一个未来前端大神的八度空间
+            <article class="post-container post-container--single">
 
-   每个人都是有着无限潜力的金矿，可惜人的一生有限，即使是像爱因斯坦这样的天才，到死也只是开发出人脑机能的10%。
-  在人类极限研究的领域里，有这么一个常人不曾窥探的深度，TA被研究人员称为灵感的“第八度”。马克思，达尔文，牛顿，爱因斯坦，霍金，莎士比亚等等历史长河中显赫的明珠，这些人被认为是接近第八度大门的人，这些人只是被这“第八度”里面的余光照到，便已经给人类带来了巨大的变革，推动了历史巨轮的转动，将人类一次次得带入到新纪元！
-  这里是一蓑烟雨的八
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-11-25T11:44:15.000Z" class="post-list__meta--date date">2015-11-25</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2015/11/25/你好/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2015-12-18T13:38:34.000Z" class="post-list__meta--date date">2015-12-18</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
+  <a class="tag-link" href="/tags/h5/">h5</a>
+</span>
+    </div>
+    <h1 class="post-title">Dom的一些知识</h1>
+  </header>
+
+  <section class="post">
+    <h3 id="想做游戏的，一定要学好这些东西。">想做游戏的，一定要学好这些东西。</h3><a id="more"></a>
+<pre><code>html:指整个html文档
+
+innerHTML,title,URL,write;
+
+IE678只支持getElementById;
+getElementById()
+getElementsByName()
+getElementsByTagName()
+
+获取非行间样式：
+getComputedStyle()<span class="comment">//标准浏览器支持</span>
+currentStyle()<span class="comment">//IE678浏览器支持</span>
+
+currentStyle.属性名；
+
+<span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">ele,haha</span>)</span>{
+    <span class="keyword">if</span>(<span class="built_in">window</span>.getComputedStyle){
+        <span class="keyword">return</span> <span class="built_in">window</span>.getComputedStyle(ele,<span class="literal">null</span>)[haha];
+    }<span class="keyword">else</span> <span class="keyword">if</span>(ele.currentStyle){
+        <span class="keyword">return</span> ele.currentStyle[haha];
+    }
+    <span class="keyword">return</span> <span class="literal">null</span>;
+}
+
+linear-gradient<span class="comment">//渐变</span>
+
+<span class="keyword">var</span> heihei = ele.currentStyle ? ele.currentStyle : <span class="built_in">window</span>.getComputedStyle(ele,<span class="literal">null</span>);
+    <span class="keyword">return</span> heihei[haha];
 
 
-  <nav class="pagination" role="navigation">
-    
-      <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/#blog">Prev</a>
-    
-    
-  </nav>
+<span class="keyword">var</span> heihei = ele.currentStyle || <span class="built_in">window</span>.getComputedStyle(ele,<span class="literal">null</span>);
+    <span class="keyword">return</span> heihei[haha];
 
 
-</div>
+
+
+下午：
+<span class="built_in">document</span>.childNodes:子节点的集合，文本节点空格和换行会增加文本节点
+<span class="built_in">document</span>.childNodes[<span class="number">1</span>].children:非标准属性
+
+firstElementChild<span class="comment">//标准属性，IE678不支持（支持firstChild）;</span>
+
+nextElementSibling<span class="comment">//下一个兄弟节点，IE678不支持   previousSibling:下一个兄弟节点，</span>
+
+有Element的是标准属性，但是IE678不支持；可以过滤掉空白
+
+parentNode获取父类节点
+
+层级：父节点，子节点，兄弟节点
+类型：元素节点、属性节点、文本节点、注释节点、<span class="built_in">document</span>节点
+
+
+
+晚上：
+nodeType 查看节点类型；
+<span class="number">9</span>：<span class="built_in">document</span>(对象)节点；
+<span class="number">8</span>：注释节点
+<span class="number">3</span>：空节点
+<span class="number">2</span>：属性节点
+<span class="number">1</span>：元素节点
+nodeName 查看节点的名称；
+nodeValue 查看节点的值。
+
+取第一个元素：
+    <span class="keyword">var</span> obj = ele.firstElementChild || ele.firstChild;
+    <span class="keyword">if</span>(obj.nodeType == <span class="number">3</span>){
+        <span class="keyword">return</span> obj.nextSibling;
+    }
+    <span class="keyword">if</span>(obj.nodeType == <span class="number">1</span>){
+        <span class="keyword">return</span> obj;
+    }
+
+<span class="keyword">var</span> list = ele.childNodes;
+<span class="keyword">if</span>(list.length&gt;<span class="number">0</span>){
+    <span class="keyword">var</span> length = list.length;
+    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; length;i++){
+        <span class="keyword">if</span>(list[i].nodeType == <span class="number">1</span>){
+            <span class="keyword">return</span> list[i];
+            <span class="keyword">break</span>;
+        }
+    }
+}
+
+<span class="keyword">var</span> nodes = ele.children;
+<span class="keyword">if</span>(nodes.length&gt;<span class="number">0</span>){
+    <span class="keyword">return</span> children[<span class="number">0</span>];
+}
+
+
+attributes 获取当前节点的所有属性的集合
+</code></pre>
+  </section>
+
+</article>
+
+
+<section class="post-comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="http://yoursite.com/2015/12/18/Dom的一些知识/" data-title="Dom的一些知识" data-url="http://yoursite.com/2015/12/18/Dom的一些知识/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"haomark"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
 
 
 
