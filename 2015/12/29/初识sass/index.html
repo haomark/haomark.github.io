@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>初识sass | 一蓑烟雨</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="很好吃的web前端菜鸟">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="初识sass | 一蓑烟雨">
+    <meta name="twitter:description" content="很好吃的web前端菜鸟">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="初识sass | 一蓑烟雨">
+    <meta property="og:description" content="很好吃的web前端菜鸟">
+
+    
+    <meta name="author" content="Mark">
+    
+    <link rel="stylesheet" href="/css/vno.css" type="text/css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" type="text/css">
+
+    
+    <link rel="icon" href="/images/logo3.jpg">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+
+    <link rel="canonical" href="http://yoursite.com/2015/12/29/初识sass/"/>
+
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 一蓑烟雨 的主页"><img src="/images/logo2.jpg" width="80" alt="一蓑烟雨 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 一蓑烟雨">一蓑烟雨</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">很好吃的web前端菜鸟</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/">首页</a></li>
+            
+              <li class="navigation__item"><a href="/">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/2381661991" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/haomark" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-disabled"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2015-12-29T02:19:45.000Z" class="post-list__meta--date date">2015-12-29</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">初识sass</h1>
+  </header>
+
+  <section class="post">
+    <p>sass的一些知识</p>
+<a id="more"></a>
+<p>CSS 预处理器技术已经非常的成熟，而且也涌现出了越来越多的 CSS 的预处理器框架。本文向你介绍使用最为普遍的三款 CSS 预处理器框架，分别是 Sass、Less CSS、Stylus。</p>
+<p>首先我们来简单介绍下什么是 CSS 预处理器，CSS 预处理器是一种语言用来为 CSS 增加一些编程的的特性，无需考虑浏览器的兼容性问题，例如你可以在 CSS 中使用变量、简单的程序逻辑、函数等等在编程语言中的一些基本技巧，可以让你的 CSS 更见简洁，适应性更强，代码更直观等诸多好处。</p>
+<p>不要再停留在石器时代了，下面让我们开始 CSS 预处理器之旅。</p>
+<p>我们将会从语法、变量、嵌套、混入(Mixin)、继承、导入、函数和操作符等方面分别对这三个框架进行比较介绍。</p>
+<p>语法</p>
+<p>在使用 CSS 预处理器之前最重要的是理解语法，幸运的是基本上大多数预处理器的语法跟 CSS 都差不多。</p>
+<p>首先 Sass 和 Less 都使用的是标准的 CSS 语法，因此如果你可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。</p>
+<p>下面是这二者的语法：<br>?<br>1<br>2<br>3<br>4</p>
+<p>/<em> style.scss or style.less </em>/<br>h1 {<br>  color: #0982C1;<br>}</p>
+<p>你注意到了，这是一个再普通不过的，不过 Sass 同时也支持老的语法，就是不包含花括号和分号的方式：<br>?<br>1<br>2<br>3</p>
+<p>/<em> style.sass </em>/<br>h1<br>  color: #0982c1</p>
+<p>而 Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名，下面是 Stylus 支持的语法：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12</p>
+<p>/<em> style.styl </em>/<br>h1 {<br>  color: #0982C1;<br>}</p>
+<p>/<em> omit brackets </em>/<br>h1<br>  color: #0982C1;</p>
+<p>/<em> omit colons and semi-colons </em>/<br>h1<br>  color #0982C1</p>
+<p>你也可以在同一个样式单中使用不同的变量，例如下面的写法也不会报错：<br>?<br>1<br>2<br>3<br>4<br>5</p>
+<p>h1 {<br>  color #0982c1<br>}<br>h2<br>  font-size: 1.2em</p>
+<p>变量</p>
+<p>你可以在 CSS 预处理器中声明变量，并在整个样式单中使用，支持任何类型的变量，例如颜色、数值（不管是否包括单位）、文本。然后你可以任意引用该变量。</p>
+<p>Sass 的变量必须是 $ 开始，然后变量名和值使用冒号隔开，跟 CSS 的属性一致：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</p>
+<p>$mainColor: #0982c1;<br>$siteWidth: 1024px;<br>$borderStyle: dotted;</p>
+<p>body {<br>  color: $mainColor;<br>  border: 1px $borderStyle $mainColor;<br>  max-width: $siteWidth;<br>}</p>
+<p>而 Less 的变量名使用 @ 符号开始：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</p>
+<p>@mainColor: #0982c1;<br>@siteWidth: 1024px;<br>@borderStyle: dotted;</p>
+<p>body {<br>  color: @mainColor;<br>  border: 1px @borderStyle @mainColor;<br>  max-width: @siteWidth;<br>}</p>
+<p>Stylus 对变量名没有任何限定，你可以是 $ 开始，也可以是任意的字符，而且与变量值之间可以用冒号、空格隔开，需要注意的是 Stylus (0.22.4) 将会编译 @ 开始的变量，但其对应的值并不会赋予该变量，换句话说，在 Stylus 的变量名不要用 @ 开头。<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</p>
+<p>mainColor = #0982c1<br>siteWidth = 1024px<br>$borderStyle = dotted</p>
+<p>body<br>  color mainColor<br>  border 1px $borderStyle mainColor<br>  max-width siteWidth</p>
+<p>上面的三种不同的 CSS 预处理器的写法，最终都将产生相同的结果：<br>?<br>1<br>2<br>3<br>4<br>5</p>
+<p>body {<br>  color: #0982c1;<br>  border: 1px dotted #0982c1;<br>  max-width: 1024px;<br>}</p>
+<p>你可以想象，加入你的 CSS 中使用了某个颜色的地方多达数十次，那么要修改颜色时你必须找到这数十次的地方并一一修改，而有了 CSS 预处理器，修改一个地方就够了！</p>
+<p>嵌套</p>
+<p>如果我们需要在CSS中相同的 parent 引用多个元素，这将是非常乏味的，你需要一遍又一遍地写 parent。例如：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12</p>
+<p>section {<br>  margin: 10px;<br>}<br>section nav {<br>  height: 25px;<br>}<br>section nav a {<br>  color: #0982C1;<br>}<br>section nav a:hover {<br>  text-decoration: underline;<br>}</p>
+<p>而如果用 CSS 预处理器，就可以少些很多单词，而且父子节点关系一目了然。我们这里提到的三个 CSS 框架都是允许嵌套语法：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15</p>
+<p>section {<br>  margin: 10px;</p>
+<p>  nav {<br>    height: 25px;</p>
+<pre><code><span class="tag">a</span> {
+  <span class="attribute">color</span>: <span class="hexcolor">#0982C1</span>;
+
+  <span class="keyword">&amp;</span><span class="tag">amp</span>;<span class="pseudo">:hover</span> {
+    <span class="attribute">text-decoration</span>: underline;
+  }
+}
+</code></pre><p>  }<br>}</p>
+<p>最终生成的 CSS 结果是：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12</p>
+<p>section {<br>  margin: 10px;<br>}<br>section nav {<br>  height: 25px;<br>}<br>section nav a {<br>  color: #0982C1;<br>}<br>section nav a:hover {<br>  text-decoration: underline;<br>}</p>
+<p>非常之方便！</p>
+<p>Mixins (混入)</p>
+<p>Mixins 有点像是函数或者是宏，当你某段 CSS 经常需要在多个元素中使用时，你可以为这些共用的 CSS 定义一个 Mixin，然后你只需要在需要引用这些 CSS 地方调用该 Mixin 即可。</p>
+<p>Sass 的混入语法：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17</p>
+<p>/<em> Sass mixin error with (optional) argument $borderWidth which defaults to 2px if not specified </em>/<br>@mixin error($borderWidth: 2px) {<br>  border: $borderWidth solid #F00;<br>  color: #F00;<br>}</p>
+<p>.generic-error {<br>  padding: 20px;<br>  margin: 4px;<br>  @ include error(); /<em> Applies styles from mixin error </em>/<br>}<br>.login-error {<br>  left: 12px;<br>  position: absolute;<br>  top: 20px;<br>  @ include error(5px); /<em> Applies styles from mixin error with argument $borderWidth equal to 5px</em>/<br>}</p>
+<p>Less CSS 的混入语法：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17</p>
+<p>/<em> LESS mixin error with (optional) argument @borderWidth which defaults to 2px if not specified </em>/<br>.error(@borderWidth: 2px) {<br>  border: @borderWidth solid #F00;<br>  color: #F00;<br>}</p>
+<p>.generic-error {<br>  padding: 20px;<br>  margin: 4px;<br>  .error(); /<em> Applies styles from mixin error </em>/<br>}<br>.login-error {<br>  left: 12px;<br>  position: absolute;<br>  top: 20px;<br>  .error(5px); /<em> Applies styles from mixin error with argument @borderWidth equal to 5px </em>/<br>}</p>
+<p>Stylus 的混入语法：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17</p>
+<p>/<em> Stylus mixin error with (optional) argument borderWidth which defaults to 2px if not specified </em>/<br>error(borderWidth= 2px) {<br>  border: borderWidth solid #F00;<br>  color: #F00;<br>}</p>
+<p>.generic-error {<br>  padding: 20px;<br>  margin: 4px;<br>  error(); /<em> Applies styles from mixin error </em>/<br>}<br>.login-error {<br>  left: 12px;<br>  position: absolute;<br>  top: 20px;<br>  error(5px); /<em> Applies styles from mixin error with argument borderWidth equal to 5px </em>/<br>}</p>
+<p>最终它们都将编译成如下的 CSS 样式：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13</p>
+<p>.generic-error {<br>  padding: 20px;<br>  margin: 4px;<br>  border: 2px solid #f00;<br>  color: #f00;<br>}<br>.login-error {<br>  left: 12px;<br>  position: absolute;<br>  top: 20px;<br>  border: 5px solid #f00;<br>  color: #f00;<br>}</p>
+<p>继承</p>
+<p>当我们需要为多个元素定义相同样式的时候，我们可以考虑使用继承的做法。例如我们经常需要：<br>?<br>1<br>2<br>3<br>4<br>5</p>
+<p>p,<br>ul,<br>ol {<br>  /<em> styles here </em>/<br>}</p>
+<p>在 Sass 和 Stylus 我们可以这样写：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14</p>
+<p>.block {<br>  margin: 10px 5px;<br>  padding: 2px;<br>}</p>
+<p>p {<br>  @extend .block; /<em> Inherit styles from ‘.block’ </em>/<br>  border: 1px solid #EEE;<br>}<br>ul, ol {<br>  @extend .block; /<em> Inherit styles from ‘.block’ </em>/<br>  color: #333;<br>  text-transform: uppercase;<br>}</p>
+<p>在这里首先定义 .block 块，然后让 p 、ul 和 ol 元素继承 .block ，最终生成的 CSS 如下：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11</p>
+<p>.block, p, ul, ol {<br>  margin: 10px 5px;<br>  padding: 2px;<br>}<br>p {<br>  border: 1px solid #EEE;<br>}<br>ul, ol {<br>  color: #333;<br>  text-transform: uppercase;<br>}</p>
+<p>在这方面 Less 表现的稍微弱一些，更像是混入写法：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14</p>
+<p>.block {<br>  margin: 10px 5px;<br>  padding: 2px;<br>}</p>
+<p>p {<br>  .block; /<em> Inherit styles from ‘.block’ </em>/<br>  border: 1px solid #EEE;<br>}<br>ul, ol {<br>  .block; /<em> Inherit styles from ‘.block’ </em>/<br>  color: #333;<br>  text-transform: uppercase;<br>}</p>
+<p>生成的 CSS 如下：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16</p>
+<p>.block {<br>  margin: 10px 5px;<br>  padding: 2px;<br>}<br>p {<br>  margin: 10px 5px;<br>  padding: 2px;<br>  border: 1px solid #EEE;<br>}<br>ul,<br>ol {<br>  margin: 10px 5px;<br>  padding: 2px;<br>  color: #333;<br>  text-transform: uppercase;<br>}</p>
+<p>你所看到的上面的代码中，.block 的样式将会被插入到相应的你想要继承的选择器中，但需要注意的是优先级的问题。</p>
+<p>导入 (Import)</p>
+<p>很多 CSS 开发者对导入的做法都不太感冒，因为它需要多次的 HTTP 请求。但是在 CSS 预处理器中的导入操作则不同，它只是在语义上包含了不同的文件，但最终结果是一个单一的 CSS 文件，如果你是通过 @ import “file.css”; 导入 CSS 文件，那效果跟普通的 CSS 导入一样。注意：导入文件中定义的混入、变量等信息也将会被引入到主样式文件中，因此需要避免它们互相冲突。</p>
+<p>reset.css:<br>?<br>1<br>2<br>3<br>4</p>
+<p>/<em> file.{type} </em>/<br>body {<br>  background: #EEE;<br>}</p>
+<p>main.xxx:<br>?<br>1<br>2<br>3<br>4<br>5<br>6</p>
+<p>@ import “reset.css”;<br>@ import “file.{type}”;</p>
+<p>p {<br>  background: #0982C1;<br>}</p>
+<p>最终生成的 CSS：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7</p>
+<p>@ import “reset.css”;<br>body {<br>  background: #EEE;<br>}<br>p {<br>  background: #0982C1;<br>}</p>
+<p>颜色函数</p>
+<p>CSS 预处理器一般都会内置一些颜色处理函数用来对颜色值进行处理，例如加亮、变暗、颜色梯度等。</p>
+<p>Sass：<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11</p>
+<p>lighten($color, 10%); /<em> returns a color 10% lighter than $color </em>/<br>darken($color, 10%);  /<em> returns a color 10% darker than $color </em>/</p>
+<p>saturate($color, 10%);   /<em> returns a color 10% more saturated than $color </em>/<br>desaturate($color, 10%); /<em> returns a color 10% less saturated than $color </em>/</p>
+<p>grayscale($color);  /<em> returns grayscale of $color </em>/<br>complement($color); /<em> returns complement color of $color </em>/<br>invert($color);     /<em> returns inverted color of $color </em>/</p>
+<p>mix($color1, $color2, 50%); /<em> mix $color1 with $color2 with a weight of 50% </em>/</p>
+<p>上面只是简单列了 Sass 的一些基本颜色处理函数，完整的列表请看 Sass Documentation.</p>
+<p>下面是一个具体的例子：<br>?<br>1<br>2<br>3<br>4<br>5<br>6</p>
+<p>$color: #0982C1;</p>
+<p>h1 {<br>  background: $color;<br>  border: 3px solid darken($color, 50%);<br>}</p>
+<p>Less CSS:<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</p>
+<p>lighten(@color, 10%); /<em> returns a color 10% lighter than @color </em>/<br>darken(@color, 10%);  /<em> returns a color 10% darker than @color </em>/</p>
+<p>saturate(@color, 10%);   /<em> returns a color 10% more saturated than @color </em>/<br>desaturate(@color, 10%); /<em> returns a color 10% less saturated than @color </em>/</p>
+<p>spin(@color, 10);  /<em> returns a color with a 10 degree larger in hue than @color </em>/<br>spin(@color, -10); /<em> returns a color with a 10 degree smaller hue than @color </em>/</p>
+<p>mix(@color1, @color2); /<em> return a mix of @color1 and @color2 </em>/</p>
+<p>LESS 完整的颜色函数列表请看 LESS Documentation.</p>
+<p>LESS 使用颜色函数的例子：<br>?<br>1<br>2<br>3<br>4<br>5<br>6</p>
+<p>@color: #0982C1;</p>
+<p>h1 {<br>  background: @color;<br>  border: 3px solid darken(@color, 50%);<br>}</p>
+<p>Stylus:<br>?<br>1<br>2<br>3<br>4<br>5</p>
+<p>lighten(color, 10%); /<em> returns a color 10% lighter than ‘color’ </em>/<br>darken(color, 10%);  /<em> returns a color 10% darker than ‘color’ </em>/</p>
+<p>saturate(color, 10%);   /<em> returns a color 10% more saturated than ‘color’ </em>/<br>desaturate(color, 10%); /<em> returns a color 10% less saturated than ‘color’ </em>/</p>
+<p>完整的颜色函数列表请阅读 Stylus Documentation.</p>
+<p>实例：<br>?<br>1<br>2<br>3<br>4<br>5</p>
+<p>color = #0982C1</p>
+<p>h1<br>  background color<br>  border 3px solid darken(color, 50%)</p>
+<p>运算符</p>
+<p>你可以直接在 CSS 预处理器中进行样式的计算，例如：<br>?<br>1<br>2<br>3<br>4<br>5<br>6</p>
+<p>body {<br>  margin: (14px/2);<br>  top: 50px + 100px;<br>  right: 100px - 50px;<br>  left: 10 * 10;<br>}</p>
+<p>一些跟具体浏览器相关的处理</p>
+<p>这是宣传使用预处理的原因之一，并且是一个很好的理由，这样可以节省的大量的时间和汗水。创建一个mixin来处理不同浏览器的CSS写法是很简单的，节省了大量的重复工作和痛苦的代码编辑。</p>
+<p>Sass<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</p>
+<p>@mixin border-radius($values) {<br>  -webkit-border-radius: $values;<br>     -moz-border-radius: $values;<br>          border-radius: $values;<br>}</p>
+<p>div {<br>  @ include border-radius(10px);<br>}</p>
+<p>Less CSS<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</p>
+<p>.border-radius(@values) {<br>  -webkit-border-radius: @values;<br>     -moz-border-radius: @values;<br>          border-radius: @values;<br>}</p>
+<p>div {<br>  .border-radius(10px);<br>}</p>
+<p>Stylus<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</p>
+<p>border-radius(values) {<br>  -webkit-border-radius: values;<br>     -moz-border-radius: values;<br>          border-radius: values;<br>}</p>
+<p>div {<br>  border-radius(10px);<br>}</p>
+<p>编译结果：<br>?<br>1<br>2<br>3<br>4<br>5</p>
+<p>div {<br>  -webkit-border-radius: 10px;<br>     -moz-border-radius: 10px;<br>          border-radius: 10px;<br>}</p>
+<p>3D文本</p>
+<p>要生成具有 3D 效果的文本可以使用 text-shadows ，唯一的问题就是当要修改颜色的时候就非常的麻烦，而通过 mixin 和颜色函数可以很轻松的实现：</p>
+<p>Sass<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13</p>
+<p>@mixin text3d($color) {<br>  color: $color;<br>  text-shadow: 1px 1px 0px darken($color, 5%),<br>               2px 2px 0px darken($color, 10%),<br>               3px 3px 0px darken($color, 15%),<br>               4px 4px 0px darken($color, 20%),<br>               4px 4px 2px #000;<br>}</p>
+<p>h1 {<br>  font-size: 32pt;<br>  @ include text3d(#0982c1);<br>}</p>
+<p>Less CSS<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13</p>
+<p>.text3d(@color) {<br>  color: @color;<br>  text-shadow: 1px 1px 0px darken(@color, 5%),<br>               2px 2px 0px darken(@color, 10%),<br>               3px 3px 0px darken(@color, 15%),<br>               4px 4px 0px darken(@color, 20%),<br>               4px 4px 2px #000;<br>}</p>
+<p>span {<br>  font-size: 32pt;<br>  .text3d(#0982c1);<br>}</p>
+<p>Stylus<br>?<br>1<br>2<br>3<br>4<br>5<br>6</p>
+<p>text3d(color)<br>  color: color<br>  text-shadow: 1px 1px 0px darken(color, 5%), 2px 2px 0px darken(color, 10%), 3px 3px 0px darken(color, 15%), 4px 4px 0px darken(color, 20%), 4px 4px 2px #000<br>span<br>  font-size: 32pt<br>  text3d(#0982c1)</p>
+<p>生成的 CSS<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</p>
+<p>span {<br>  font-size: 32pt;<br>  color: #0982c1;<br>  text-shadow: 1px 1px 0px #097bb7,<br>               2px 2px 0px #0875ae,<br>               3px 3px 0px #086fa4,<br>               4px 4px 0px #07689a,<br>               4px 4px 2px #000;<br>}</p>
+<p>效果图：</p>
+<p>列 (Columns)</p>
+<p>使用数值操作和变量可以很方便的实现适应屏幕大小的布局处理。</p>
+<p>Sass<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17</p>
+<p>$siteWidth: 1024px;<br>$gutterWidth: 20px;<br>$sidebarWidth: 300px;</p>
+<p>body {<br>  margin: 0 auto;<br>  width: $siteWidth;<br>}<br>.content {<br>  float: left;<br>  width: $siteWidth - ($sidebarWidth+$gutterWidth);<br>}<br>.sidebar {<br>  float: left;<br>  margin-left: $gutterWidth;<br>  width: $sidebarWidth;<br>}</p>
+<p>Less CSS<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17</p>
+<p>@siteWidth: 1024px;<br>@gutterWidth: 20px;<br>@sidebarWidth: 300px;</p>
+<p>body {<br>  margin: 0 auto;<br>  width: @siteWidth;<br>}<br>.content {<br>  float: left;<br>  width: @siteWidth - (@sidebarWidth+@gutterWidth);<br>}<br>.sidebar {<br>  float: left;<br>  margin-left: @gutterWidth;<br>  width: @sidebarWidth;<br>}</p>
+<p>Stylus<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17</p>
+<p>siteWidth = 1024px;<br>gutterWidth = 20px;<br>sidebarWidth = 300px;</p>
+<p>body {<br>  margin: 0 auto;<br>  width: siteWidth;<br>}<br>.content {<br>  float: left;<br>  width: siteWidth - (sidebarWidth+gutterWidth);<br>}<br>.sidebar {<br>  float: left;<br>  margin-left: gutterWidth;<br>  width: sidebarWidth;<br>}</p>
+<p>实际效果<br>?<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13</p>
+<p>body {<br>  margin: 0 auto;<br>  width: 1024px;<br>}<br>.content {<br>  float: left;<br>  width: 704px;<br>}<br>.sidebar {<br>  float: left;<br>  margin-left: 20px;<br>  width: 300px;<br>}</p>
+
+  </section>
+
+</article>
+
+
+<section class="post-comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="http://yoursite.com/2015/12/29/初识sass/" data-title="初识sass" data-url="http://yoursite.com/2015/12/29/初识sass/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"haomark"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
+
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        友情链接：
+        <a href="http://willerce.com">家乐</a>&nbsp;
+        <a href="http://hanmingyang.github.io/">韩哥</a>&nbsp;
+        <a href="http://zy8232003.github.io/">小跃跃</a>&nbsp;
+        <a href="http://sh5054.github.io/">浩哥</a>&nbsp;
+        <a href="http://wj1213180604.github.io/">娟神</a>&nbsp;
+        <a href="http://crerich.github.io/">徐志摩</a>&nbsp;
+        <a href="http://gcsHaya.github.io/">张俊琪</a>&nbsp;
+        <a href="http://jameblunt1973.github.io/">张记文</a>&nbsp;
+        <a href="http://running11.github.io/">孙燕姿</a>&nbsp;
+        <a href="http://http://zgmn.github.io/">胡月</a>
+        <a href="http://quanquanxuan.github.io/">宣圆圆</a>&nbsp;
+        <a href="http://tyl1002353363.github.io/">谭于磊</a>&nbsp;
+        <a href="http://changxiangru.github.io/">常相如</a>&nbsp;
+        <a href="http://tang0916tang.github.io/">张晓翠</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2015 - 本站由 <a href="/">@haomark</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-42596364-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
