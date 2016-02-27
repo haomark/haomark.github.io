@@ -140,12 +140,41 @@
   </header>
 
   <section class="post">
-    <p>1.html内容，css样式，js行为</p>
-<p>2.行间样式：优先级高，不会被其他样式覆盖，不用多一次请求；缺点：不利于代码的维护，没有样式内容分离，影响阅读体验。</p>
-<p>内部引用：<style></style>引入，不用多一次请求，单一页面使用效果佳；缺点：不利于复用。</p>
-<p>外部引用：样式内容分离，多一次请求；</p>
+    <a id="more"></a>
+<p>1.html内容，css样式，js行为</p>
+<p>2.css引入方式 优缺点</p>
+<p>行间样式：优先级高，不会被其他样式覆盖，不用多一次请求；缺点：不利于代码的维护，没有样式内容分离，影响阅读体验。</p>
+<p>内部引用：</p>
+<pre><code><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>    
+</code></pre><p>标签引入，不用多一次请求，单一页面使用效果佳；缺点：不利于复用。</p>
+<p>外部引用：样式内容分离，便于维护；多一次请求，增加服务器负担；</p>
 <p>3.@import url（reset.css） 在css中引入</p>
 <p>em继承父类，rem继承html</p>
+<p>4.css的注释方式  /**/</p>
+<p>5.选择器种类：</p>
+<ul>
+<li>id选择器 #id</li>
+<li>class选择器 .class</li>
+<li>标签选择器 tag</li>
+<li>通配选择器 *</li>
+<li>层级选择器 div span &amp; div&gt;span (前者包括子子孙孙，后者只包含子类)</li>
+<li>群组选择器 html,body{width:100%;height:100%} 偏重于代码优化</li>
+<li>伪类选择器 A的4个伪类</li>
+<li>伪元素选择器 : :: before&amp;after</li>
+</ul>
+<p>6.css中色彩的表示方式</p>
+<ul>
+<li>css支持17种合法的颜色命名：aqua fuchsia lime olive red white black gray maroon orange silver yellow blue green navy purple teal</li>
+<li>16进制：将三个介于00-FF的十六进制数连接起来</li>
+<li>rgb 有0-255的256个单元，其中0是完全无光状态，255是最亮状态</li>
+</ul>
+<p><img src="http://7xoo70.com1.z0.glb.clouddn.com/%E4%B8%89%E5%8E%9F%E8%89%B2.jpg" alt="三原色"></p>
+<ul>
+<li>rgba(IE8-浏览器不支持)，在RGB基础上增加了alpha通道，用来设置颜色的透明度，其中这个通道值的范围是0-1。</li>
+<li>hsl (IE8-浏览器不支持) HSL模式是通过对色调(H)、饱和度(S)、亮度(L)三个颜色通道的变化以及它们相互的叠加得到各式各样的颜色。HSL标准几乎可以包括人类视力所能感知的所有颜色.h:色调(hue)可以为任意整数。0(或360或-360)表示红色，60表示黄色，120表示绿色，180表示青色，240表示蓝色，300表示洋红(当h值大于360时，实际的值等于该值模360后的值).s:饱和度(saturation)，就是指颜色的深浅度和鲜艳程度。取0-100%范围的值，其中0表示灰度(没有该颜色)，100%表示饱和度最高(颜色最鲜艳).l:亮度(lightness)，取0-100%范围的值，其中0表示最暗(黑色)，100%表示最亮(白色)</li>
+</ul>
+<p><img src="http://7xoo70.com1.z0.glb.clouddn.com/color.jpg" alt="色彩"></p>
+<p><img src="http://7xoo70.com1.z0.glb.clouddn.com/color1.jpg" alt="色彩"></p>
 
   </section>
 
