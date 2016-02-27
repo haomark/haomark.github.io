@@ -141,18 +141,12 @@
 
   <section class="post">
     <a id="more"></a>
-<p>1.html内容，css样式，js行为</p>
-<p>2.css引入方式 优缺点</p>
-<p>行间样式：优先级高，不会被其他样式覆盖，不用多一次请求；缺点：不利于代码的维护，没有样式内容分离，影响阅读体验。</p>
+<h2 id="1-html内容，css样式，js行为">1.html内容，css样式，js行为</h2><h2 id="2-css引入方式_优缺点">2.css引入方式 优缺点</h2><p>行间样式：优先级高，不会被其他样式覆盖，不用多一次请求；缺点：不利于代码的维护，没有样式内容分离，影响阅读体验。</p>
 <p>内部引用：</p>
-<pre><code><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>    
+<pre><code><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
 </code></pre><p>标签引入，不用多一次请求，单一页面使用效果佳；缺点：不利于复用。</p>
 <p>外部引用：样式内容分离，便于维护；多一次请求，增加服务器负担；</p>
-<p>3.@import url（reset.css） 在css中引入</p>
-<p>em继承父类，rem继承html</p>
-<p>4.css的注释方式  /**/</p>
-<p>5.选择器种类：</p>
-<ul>
+<h2 id="3-@import_url（reset-css）_在css中引入">3.@import url（reset.css） 在css中引入</h2><h2 id="4-css的注释方式_/**/">4.css的注释方式  /**/</h2><h2 id="5-选择器种类：">5.选择器种类：</h2><ul>
 <li>id选择器 #id</li>
 <li>class选择器 .class</li>
 <li>标签选择器 tag</li>
@@ -162,8 +156,7 @@
 <li>伪类选择器 A的4个伪类</li>
 <li>伪元素选择器 : :: before&amp;after</li>
 </ul>
-<p>6.css中色彩的表示方式</p>
-<ul>
+<h2 id="6-css中色彩的表示方式">6.css中色彩的表示方式</h2><ul>
 <li>css支持17种合法的颜色命名：aqua fuchsia lime olive red white black gray maroon orange silver yellow blue green navy purple teal</li>
 <li>16进制：将三个介于00-FF的十六进制数连接起来</li>
 <li>rgb 有0-255的256个单元，其中0是完全无光状态，255是最亮状态</li>
@@ -175,6 +168,58 @@
 </ul>
 <p><img src="http://7xoo70.com1.z0.glb.clouddn.com/color.jpg" alt="色彩"></p>
 <p><img src="http://7xoo70.com1.z0.glb.clouddn.com/color1.jpg" alt="色彩"></p>
+<ul>
+<li><p>hsla (IE8-浏览器不支持)HSLA模式是HSL的扩展模式，在HSL的基础上增加一个透明通道alpha来设置透明度</p>
+<p>  hsla(length,percentage,percentage,opacity)</p>
+</li>
+</ul>
+<h2 id="7-单位">7.单位</h2><ul>
+<li>em继承父类，rem继承html</li>
+<li>vh和vw 视窗单位  vh等于viewport高度的1/100.例如，如果浏览器的高是900px,1vh求得的值为9px。同理，如果显示窗口宽度为750px,1vw求得的值为7.5px</li>
+</ul>
+<h2 id="8-line-height">8.line-height</h2><ul>
+<li>基线、底线、顶线</li>
+</ul>
+<p><img src="http://7xoo70.com1.z0.glb.clouddn.com/o_line_height.png" alt="基线"></p>
+<ul>
+<li>行高、行距</li>
+</ul>
+<p><img src="http://7xoo70.com1.z0.glb.clouddn.com/o_text_018.gif" alt="行高"></p>
+<h2 id="9-字体">9.字体</h2><ul>
+<li>font-family中有时候字体加引号有时候不加引号。区别在于对字体名称中空格的处理不同。不加引号时，忽略字体左右两端的空白字符，单词之间的空白字符被解释为一个空白字符。比如font-family:   Times   New   Roman   , sans-serif。被解释为font-family:Times New Roman,sans-serif。加引号时，需要保留引号内的所有空格。比如font-family:”Times    New Roman”,sans-serif。浏览器会去寻找“Times   New Roman”这个字体。</li>
+<li>具有继承性</li>
+<li>sans-serif 非衬线字体，衬线字体以外的所有字体都成为非衬线字体。非衬线字体的线条比较均匀，通常在艺术字、标题中的使用较多。</li>
+</ul>
+<p><img src="http://7xoo70.com1.z0.glb.clouddn.com/290915103024376.png" alt="字体"></p>
+<ul>
+<li>serif 衬线字体，通常是指使用末端加强原则的字体，通过在文字末端加入细小变化来改变小号文字的可读性</li>
+</ul>
+<p><img src="http://7xoo70.com1.z0.glb.clouddn.com/290907507558692.png" alt="字体"></p>
+<h2 id="10-BFC">10.BFC</h2><p>－ BFC</p>
+<ul>
+<li><p>FC全称”Formatting Context”, 中文为“格式化上下文”</p>
+</li>
+<li><p>BFC全称”Block Formatting Context”, 中文为“块级格式化上下文”</p>
+</li>
+<li><p>IFC全称”Block Formatting Context”, 中文为“行级格式化上下文”</p>
+</li>
+</ul>
+<p>－ BFC的生成<br>满足下列CSS声明之一的元素便会生成BFC。</p>
+<ul>
+<li>根元素</li>
+<li>float的值不为none</li>
+<li>overflow的值不为visible</li>
+<li>display的值为inline-block、table-cell、table-caption</li>
+<li>position的值为absolute或fixed</li>
+</ul>
+<p>－ BFC的约束规则</p>
+<ul>
+<li><p>生成BFC元素的子元素会一个接一个的放置。垂直方向上他们的起点是一个包含块的顶部，两个相邻子元素之间的垂直距离取决于元素的margin特性。在BFC中相邻的块级元素外边距会折叠。</p>
+</li>
+<li><p>生成BFC元素的子元素中，每一个子元素做外边距与包含块的左边界相接触，（对于从右到左的格式化，右外边距接触右边界），即使浮动元素也是如此（尽管子元素的内容区域会由于浮动而压缩），除非这个子元素也创建了一个新的BFC（如它自身也是一个浮动元素）。</p>
+</li>
+</ul>
+<p>内部的Box会在垂直方向上一个接一个的放置<br>垂直方向上的距离由margin决定。（完整的说法是：属于同一个BFC的两个相邻Box的margin会发生重叠，与方向无关。）<br>每个元素的左外边距与包含块的左边界相接触（从左向右），即使浮动元素也是如此。（这说明BFC中子元素不会超出他的包含块，而position为absolute的元素可以超出他的包含块边界）<br>BFC的区域不会与float的元素区域重叠<br>计算BFC的高度时，浮动子元素也参与计算<br>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面元素，反之亦然</p>
 
   </section>
 
