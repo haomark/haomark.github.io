@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>一蓑烟雨</title>
+    <title>美团等app如何辨别是同一台设备下单？ | 一蓑烟雨</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="很好吃的web前端菜鸟">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="一蓑烟雨">
+    <meta name="twitter:title" content="美团等app如何辨别是同一台设备下单？ | 一蓑烟雨">
     <meta name="twitter:description" content="很好吃的web前端菜鸟">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="一蓑烟雨">
+    <meta property="og:title" content="美团等app如何辨别是同一台设备下单？ | 一蓑烟雨">
     <meta property="og:description" content="很好吃的web前端菜鸟">
 
     
@@ -35,7 +35,7 @@
     <meta name="generator" content="hexo"/>
     
 
-    <link rel="canonical" href="http://yoursite.com"/>
+    <link rel="canonical" href="http://yoursite.com/2016/02/29/美团等app如何辨别是同一台设备下单？/"/>
 
     
 </head>
@@ -128,68 +128,53 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/02/29/美团等app如何辨别是同一台设备下单？/" title="link to post.title">美团等app如何辨别是同一台设备下单？</a></h2>
-      <p class="excerpt">
-    
-      这是一个一直困惑我的问题，现在有个个较好的答案。
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-02-29T01:14:44.000Z" class="post-list__meta--date date">2016-02-29</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-02-29T01:14:44.000Z" class="post-list__meta--date date">2016-02-29</time> &#8226; <span class="post-meta__tags tags">于&nbsp;
   <a class="tag-link" href="/tags/get新知识/">get新知识</a>
-</span><a class="btn-border-small" href="/2016/02/29/美团等app如何辨别是同一台设备下单？/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/02/26/CSS知识点回顾/" title="link to post.title">CSS知识点回顾</a></h2>
-      <p class="excerpt">
-    
-      CSS知识点回顾
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-02-26T13:54:20.000Z" class="post-list__meta--date date">2016-02-26</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;
-  <a class="tag-link" href="/tags/h5/">h5</a>
-</span><a class="btn-border-small" href="/2016/02/26/CSS知识点回顾/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/02/26/mate/" title="link to post.title">mate</a></h2>
-      <p class="excerpt">
-    
-      meta标签的一些用法
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-02-26T00:58:32.000Z" class="post-list__meta--date date">2016-02-26</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/02/26/mate/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/02/25/html知识点回顾/" title="link to post.title">html知识点回顾</a></h2>
-      <p class="excerpt">
-    
-      html知识点回顾
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-02-25T07:46:22.000Z" class="post-list__meta--date date">2016-02-25</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/02/25/html知识点回顾/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
+</span>
+    </div>
+    <h1 class="post-title">美团等app如何辨别是同一台设备下单？</h1>
+  </header>
+
+  <section class="post">
+    <p>这是一个一直困惑我的问题，现在有个个较好的答案。</p>
+<a id="more"></a>
+<p>识别设备底层码。一般是唯一的。</p>
+<blockquote>
+<p>1、所有的设备都可以返回一个 TelephonyManager.getDeviceId()</p>
+<p>2、所有的GSM设备 (测试设备都装载有SIM卡) 可以返回一个<br>TelephonyManager.getSimSerialNumber()</p>
+<p>3、所有的CDMA 设备对于 getSimSerialNumber() 却返回一个空值！</p>
+<p>4、所有添加有谷歌账户的设备可以返回一个 ANDROID_ID</p>
+<p>5、所有的CDMA设备对于 ANDROID_ID 和 TelephonyManager.getDeviceId() 返回相同的值（只要在设置时添加了谷歌账户） </p>
+</blockquote>
+<p>以上几点，确保了你即使是不同的账号，不同的网络，不同的手机号，还是卸载了之后又重新下载，只要是同一个手机下单，设备的唯一编号就不会改变，系统就自动识别为不是新人，所以不能使用最新的优惠。</p>
+<font color="orange">感谢百度知道“晨冬溯雪”的解答。</font>
+  </section>
+
+</article>
 
 
-
-</div>
+<section class="post-comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="http://yoursite.com/2016/02/29/美团等app如何辨别是同一台设备下单？/" data-title="美团等app如何辨别是同一台设备下单？" data-url="http://yoursite.com/2016/02/29/美团等app如何辨别是同一台设备下单？/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"haomark"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+</section>
 
 
 
