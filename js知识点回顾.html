@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>js知识点回顾 | 一蓑烟雨</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="很好吃的web前端菜鸟">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="js知识点回顾 | 一蓑烟雨">
+    <meta name="twitter:description" content="很好吃的web前端菜鸟">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="js知识点回顾 | 一蓑烟雨">
+    <meta property="og:description" content="很好吃的web前端菜鸟">
+
+    
+    <meta name="author" content="Mark">
+    
+    <link rel="stylesheet" href="/css/vno.css" type="text/css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" type="text/css">
+
+    
+    <link rel="icon" href="/images/logo3.jpg">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+
+    <link rel="canonical" href="http://yoursite.com/js知识点回顾.html"/>
+
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 一蓑烟雨 的主页"><img src="/images/logo2.jpg" width="80" alt="一蓑烟雨 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 一蓑烟雨">一蓑烟雨</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">很好吃的web前端菜鸟</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/">首页</a></li>
+            
+              <li class="navigation__item"><a href="/">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/2381661991" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/haomark" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-disabled"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <h1 class="post-title">js知识点回顾</h1>
+  </header>
+
+  <section class="post">
+    <p>前段时间的js知识点回顾</p>
+<a id="more"></a>
+<h3 id="Javascript知识点回顾">Javascript知识点回顾</h3><p>javascript  浏览器脚本语言 最大的特点就是单线程了。JavaScript的主要用途是与用户互动，以及操作DOM。负责内容 样式 行为分离环节中的分离部分。</p>
+<p>－ js的组成</p>
+<ul>
+<li><p>ECMAScript 核心 几乎没有兼容问题 担任解析器的角色 处理我们的逻辑代码 </p>
+</li>
+<li><p>DOM  文档对象模型；文档指的就是网页；把网页变成一个JS可以操作的对象；给了JS可以操作页面元素的能力；document;有一些兼容性问题；</p>
+</li>
+<li><p>BOM 浏览器对象模型；给了JS操作浏览器的能力；window；有许多兼容性问题</p>
+</li>
+</ul>
+<p>－ js的引用</p>
+<p>－ 外部文件 script标签 src属性</p>
+<p>－ 内部 script标签区域 </p>
+<p>－ 注释方式 单行注释  多行 注释</p>
+<p>－ 数据类型 </p>
+<pre><code>基本类型（primitive）
+
+<span class="number">1.</span>Undefined
+
+在使用<span class="keyword">var</span>声明变量，但未对其加以初始化时，这个变量的类型就是<span class="literal">undefined</span>，且其默认初始化值为<span class="literal">undefined</span>
+
+对未声明与初始化的变量，直接使用，那么这个变量的类型也是<span class="literal">undefined</span>，但是没有默认初始化值。
+
+<span class="keyword">type</span> test;<span class="comment">//undefined  直接调用就会报错</span>
+
+<span class="number">2.</span>Null
+
+<span class="literal">null</span>类型的默认值是<span class="literal">null</span>，表示一个空对象指针,如果定义的变量准备在将来用于保存对象,那么就该将该变量初始化为<span class="literal">null</span>。
+
+<span class="number">3.</span><span class="built_in">Boolean</span>
+
+该类型有两个值：<span class="literal">true</span> <span class="literal">false</span>
+
+<span class="built_in">Boolean</span>()方法 可以转换其他数据类型为布尔值
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/94752-7c5eb2f781cbd6f6.png"></p>
+<pre><code><span class="number">4</span><span class="class">.Number</span>
+
+整数 可以通过<span class="number">10</span>进制 <span class="number">8</span>进制 <span class="number">16</span>进制表示
+
+浮点数 该数值必须包含一个小数点，小数点后面必须有一位数字，如果小数点后只有<span class="number">0</span>，自动转换成整数
+
+浮点数占据的空间内存是内存的两倍，极大极小的数字会用e科学表示法。
+
+NaN 
+
+<span class="number">1</span>、即非数值，是一个特殊的值，这个数值用于表示一个本来要返回数值的操作数，未返回数值的情况。比如任何数值除以<span class="number">0</span>，本是不符合规范的，js里，这样的操作返回NaN（但是实际上，只有<span class="number">0</span>除以<span class="number">0</span>时返回NaN，其他则无穷值）。
+<span class="number">2</span>、NaN有两个不同寻常的特点：任何涉及NaN的操作都会返回NaN，NaN值与任何值都不相等，包括本身。
+<span class="number">3</span>、<span class="function"><span class="title">isNaN</span><span class="params">()</span></span>函数，这个函数可以判断，传递的参数是否“不是数值”这里涉及数值转换的问题，例如“<span class="number">10</span>”这个字符串就可以转换为<span class="number">10</span>，但是“blue”这个字符串则无法转换为数字，所以<span class="function"><span class="title">isNaN</span><span class="params">(<span class="string">"blue"</span>)</span></span>==true
+
+<span class="function"><span class="title">Number</span><span class="params">()</span></span> 可以    任何类型
+
+<span class="function"><span class="title">parseInt</span><span class="params">()</span></span>  <span class="function"><span class="title">parseFloat</span><span class="params">()</span></span> 只用于字符串类型
+
+
+<span class="number">5</span><span class="class">.string</span> 
+
+
+
+<span class="string">''</span> <span class="string">""</span>单引号 双引号
+
+基本类型的特点：
+
+基本类型的值是不可变得
+
+
+复杂对象类型 Object 对象是属性和方法的集合
+
+基本类型以外 就是引用类型
+
+引用类型的特点
+
+引用类型的值是可变的
+</code></pre><p>－ 变量 var （let const）</p>
+<p>变量是一个杯子，它的类型是由它里面存放的东西决定的  </p>
+<pre><code>可以通过 <span class="keyword">typeof</span>
+</code></pre><p>命名规范 一般推荐驼峰式命名</p>
+<p>-语句 </p>
+<p>-运算符 </p>
+<p>() 括号 提升运算级别 优先运算</p>
+<p>＋＋  －－  递增 递减 有前置和后置</p>
+<pre><code>前缀形式是先运算再赋值
+
+后缀形式是先赋值在运算
+</code></pre><p>！ &amp;&amp; || 逻辑非</p>
+<p>＊／％</p>
+<p>＋ 加法  拼接</p>
+<p>&lt;= &gt;= </p>
+<p>== != </p>
+<p>=== !==</p>
+<p>&lt; &gt;</p>
+<p>?: 三元条件表达式</p>
+<p>= += -=</p>
+<p>流程控制语句：</p>
+<p>if 最基本的条件判断语句</p>
+<p>switch </p>
+<p>?:</p>
+<p>for、while、do-while </p>
+<p>for-in 遍历对象</p>
+<p>forEach 遍历数组</p>
+<p>try catch</p>
+<p>width</p>
+<p>eval</p>
+<p>－ 作用域</p>
+<p>－ this</p>
+<p>this是Javascript语言的一个关键字。</p>
+<p>它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用</p>
+<p>随着函数使用场合的不同，this的值会发生变化。但是有一个总的原则，那就是this指的是，调用函数的那个对象。</p>
+<ol>
+<li><p>普通函数调用</p>
+</li>
+<li><p>作为对象方法的调用</p>
+</li>
+<li><p>作为构造函数调用</p>
+</li>
+<li><p>apply() call()</p>
+</li>
+</ol>
+<p>－ “构造函数”，其实就是一个普通函数，但是内部使用了this变量。对构造函数使用new运算符，就能生成实例，并且this变量会绑定在实例对象上</p>
+<p>用构造函数生成实例对象，有一个缺点，那就是无法共享属性和方法。</p>
+<ul>
+<li>继承</li>
+</ul>
+<p>对象之间的继承方法</p>
+<ol>
+<li>构造函数绑定</li>
+</ol>
+<p>使用call或apply方法，将父对象的构造函数绑定在子对象上</p>
+<p>任何一个prototype对象都有一个constructor属性，指向它的构造函数</p>
+<p>每一个实例也有一个constructor属性，默认调用prototype对象的constructor属性。</p>
+
+  </section>
+</article>
+
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        友情链接：
+        <a href="http://hanmingyang.github.io/">韩哥</a>&nbsp;
+        <a href="http://chumengxing1121.github.io/">阿星</a>&nbsp;
+        <a href="http://zhuqy.github.io/">小倩</a>&nbsp;
+        <a href="http://zy8232003.github.io/">小跃跃</a>&nbsp;
+        <a href="http://sh5054.github.io/">浩哥</a>&nbsp;
+        <a href="http://wj1213180604.github.io/">娟神</a>&nbsp;
+        <a href="http://crerich.github.io/">徐志摩</a>&nbsp;
+        <a href="http://gcsHaya.github.io/">张俊琪</a>&nbsp;
+        <a href="http://jameblunt1973.github.io/">张记文</a>&nbsp;
+        <a href="http://running11.github.io/">孙燕姿</a>&nbsp;
+        <a href="http://http://zgmn.github.io/">胡月</a>
+        <a href="http://quanquanxuan.github.io/">宣圆圆</a>&nbsp;
+        <a href="http://tyl1002353363.github.io/">谭于磊</a>&nbsp;
+        <a href="http://changxiangru.github.io/">常相如</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@haomark</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-42596364-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
