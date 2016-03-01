@@ -144,10 +144,21 @@
 <a id="more"></a>
 <p>this是javascript语言的一个关键字</p>
 <blockquote>
-<p>1.普通函数调用，this指向windows</p>
-<p>2.作为对象方法的调用，this指向函数本身</p>
-<p>3.作为构造函数的调用</p>
-<p>4.apply()  call()</p>
+<p>1.普通函数调用，this指向window</p>
+<p>2.作为对象方法的调用，this指向该对象</p>
+<pre><code><span class="keyword">var</span> obj = {
+    x :<span class="number">10</span>,
+    y :<span class="number">20</span>,
+    fn1 : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+        <span class="keyword">this</span>.x = <span class="number">20</span>;
+    }
+}
+obj.fn1();
+<span class="built_in">console</span>.log(obj.x);<span class="comment">//20</span>
+</code></pre><p>3.作为构造函数的调用，指向new出来的实例本身。构造函数，内部使用new，生成实例。</p>
+<p>4.apply()  call() 用来改变this的指向</p>
+<p>(1)call与apply：改变this所指的对象，call两个参数（第一个参数是所要指代的对象，第二个参数正常的传入的参数）。</p>
+<p>(2)可以让子类来继承父类的属性，属性具有父类和子类共有性，但是删除子类该属性不会对父类产生影响，删除父类该属性，子类将不会再有该属性。</p>
 </blockquote>
 
   </section>
